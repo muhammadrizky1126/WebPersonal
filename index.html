@@ -13,6 +13,42 @@
     <!-- Favicon -->
     <link id='favicon' rel="shortcut icon" href="" type="">
     <title>Portfolio</title>
+    <style>
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Hover effects */
+        .btn, .navbar ul li a {
+            transition: all 0.3s ease;
+        }
+        .btn:hover, .navbar ul li a:hover {
+            transform: scale(1.1);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .fade-in {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .navbar ul li a, .btn {
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        .navbar ul li a {
+            animation-delay: 0.5s;
+        }
+        .btn {
+            animation-delay: 1s;
+        }
+    </style>
 </head>
 <body oncontextmenu="return false">
 
@@ -28,10 +64,10 @@
     <div id="menu" class="fas fa-bars"></div>
     <nav class="navbar">
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#home" class="fade-in">Home</a></li>
+            <li><a href="#about" class="fade-in">About</a></li>
+            <li><a href="#education" class="fade-in">Education</a></li>
+            <li><a href="#certificates" class="fade-in">Certificates</a></li>
         </ul>
     </nav>
 </header>
@@ -41,7 +77,7 @@
 <section class="home" id="home">.
     <div id="particles-js"></div>
 
-    <div class="content">
+    <div class="content fade-in">
         <h2>Hi There,<br/> I'm <span>Muhammad Rizky</span></h2>
         <p>i am into <span class="">student of SMK Wikrama Bogor</span></p>
         <a href="#about" class="btn"><span>About Me</span>
@@ -58,20 +94,19 @@
         </div>
         
     </div>
-    <div class="image">
+    <div class="image fade-in">
         <img draggable="false" class="tilt" src="./assets/images/pngtree-children-s-software-programming-image_2230759-removebg-preview.png" alt="">
     </div>
 </section>
 <!-- hero section ends -->
 
 <!-- about section starts -->
-<div id="particles-js"></div>
 <section class="about" id="about">
     <h2 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h2>
     
-    <div class="row">
+    <div class="row fade-in">
         <div class="image">
-            <img draggable="false" class="tilt" src="./assets/images/profile2.jpg" alt="">
+            <img draggable="false" class="tilt" src="./assets/images/WhatsApp Image 2024-06-11 at 11.09.35 (1).jpeg" alt="">
         </div>
         <div class="content">
             <h3>I'm Rizky</h3>
@@ -103,18 +138,31 @@
 <!-- about section ends -->
 
 <!-- certificates section starts -->
+    <!-- certificates section starts -->
 <section class="certificates" id="certificates">
     <h2 class="heading"><i class="fas fa-award"></i> My <span>Certificates</span></h2>
 
-    <div class="certificates-container">
+    <div class="certificates-container fade-in">
         <div class="certificate">
-            <img draggable="false" src="./assets/images/sertifikat_course_60_3168515_060624164625.pdf" alt="Certificate 1">
-            <p>Certificate Title 1</p>
+            <img draggable="false" src="./assets/images/Muhammad Rizky.jpg" alt="Certificate 1">
+            <p>Certificate By Wanteknologi</p>
         </div>
         <div class="certificate">
-            <img draggable="false" src="./assets/images/certificates/certificate2.jpg" alt="Certificate 2">
-            <p>Certificate Title 2</p>
+            <img draggable="false" src="./assets/images/Muhammad Rizky-TTD.png" alt="Certificate 2">
+            <p>Certificat By CyberLabs</p>
         </div>
+        <div class="certificate move-down">
+            <img draggable="false" src="./assets/images/WhatsApp Image 2024-06-13 at 22.41.45.jpeg" alt="Certificate 3">
+            <p>Certificate By Dicoding</p>
+        </div>
+        <div class="certificate move-down">
+            <img draggable="false" src="./assets/images/WhatsApp Image 2024-06-13 at 23.04.34.jpeg" alt="Certificate 4">
+            <p>Certificate By Ratatype</p>
+        </div>
+    </div>
+</section>
+<!-- certificates section ends -->
+
         <!-- Add more certificates as needed -->
     </div>
 </section>
@@ -124,9 +172,9 @@
 <section class="education" id="education">
     <h1 class="heading"><i class="fas fa-graduation-cap"></i> My <span>Education</span></h1>
 
-    <p class="quote">Education is not the learning of facts, but the training of the mind to think.</p>
+    <p class="quote fade-in">Education is not the learning of facts, but the training of the mind to think.</p>
 
-    <div class="box-container">
+    <div class="box-container fade-in">
         <div class="box">
             <div class="image">
                 <img draggable="false" src="./assets/images/educat/images.jpg" alt="">
@@ -134,7 +182,8 @@
             <div class="content">
                 <h3>Vocational High School Wikrama Bogor</h3>
                 <p>Wikrama Bogor Vocational School is a vocational secondary education institution that is committed to providing quality education in various midwives</p>
-                <h4>2022-2024 | Pursuing</h4>
+                <h4>2022-2024 | 
+                    student</h4>
             </div>
         </div>
     </div>
@@ -162,3 +211,61 @@
 <!-- vanilla tilt.js links -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+<!-- Custom JavaScript for Enhancements -->
+<script>
+    // Scroll Animations
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = {
+        threshold: 0,
+        rootMargin: "0px 0px -100px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(
+        entries,
+        appearOnScroll
+    ) {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+                return;
+            } else {
+                entry.target.classList.add("appear");
+                appearOnScroll.unobserve(entry.target);
+            }
+        });
+    },
+    appearOptions);
+
+    faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+    });
+
+    // Adding appear class in CSS
+    const styleSheet = document.styleSheets[0];
+    styleSheet.insertRule(`.appear { opacity: 1 !important; transform: translateY(0) !important; }`, styleSheet.cssRules.length);
+    styleSheet.insertRule(`.fade-in { opacity: 0; transform: translateY(20px); transition: opacity 1s ease-out, transform 1s ease-out; }`, styleSheet.cssRules.length);
+
+    // Particle JS Initialization
+    particlesJS.load('particles-js', './assets/js/particles.json', function() {
+        console.log('particles.js loaded - callback');
+    });
+
+    // Tilt.js Initialization
+    VanillaTilt.init(document.querySelectorAll(".tilt"), {
+        max: 25,
+        speed: 400
+    });
+
+    // Smooth Scrolling for Anchor Links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+</script>
+</body>
+</html>

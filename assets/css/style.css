@@ -1277,3 +1277,73 @@ form .button-area {
   }
 }
 
+.certificates-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px; /* Increased gap for more spacing */
+  margin-top: 20px;
+}
+
+.certificate {
+  flex: 1 1 calc(33.333% - 40px); /* Adjusted for a larger size */
+  max-width: 300px; /* Set a larger max-width */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.certificate img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-bottom: 1px solid #ddd;
+}
+
+.certificate p {
+  text-align: center;
+  padding: 10px;
+  background: #fff;
+  margin: 0;
+}
+
+.certificate:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 1024px) {
+  .certificate {
+      flex: 1 1 calc(50% - 40px); /* Adjusted for tablet sizes */
+  }
+}
+
+@media (max-width: 768px) {
+  .certificate {
+      flex: 1 1 calc(50% - 40px); /* Adjusted for smaller tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .certificate {
+      flex: 1 1 100%; /* Adjusted for mobile devices */
+  }
+}
+
+.move-down {
+  order: 1; /* Moves this certificate to the next row */
+  flex: 1 1 calc(50% - 40px); /* Takes half width on larger screens */
+}
+
+@media (max-width: 1024px) {
+  .move-down {
+      order: unset; /* Reset order for smaller screens */
+      flex: 1 1 calc(50% - 40px); /* Takes half width on larger screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .move-down {
+      flex: 1 1 100%; /* Takes full width on smaller screens */
+  }
+}
